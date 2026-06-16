@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(git -C /Users/kerem/Documents/Reself-Frontend status)",
+      "mcp__584f0550-f3e7-4dc9-a36f-1517162eecea__list_bases",
+      "mcp__584f0550-f3e7-4dc9-a36f-1517162eecea__list_tables_for_base",
+      "mcp__584f0550-f3e7-4dc9-a36f-1517162eecea__get_table_schema",
+      "mcp__584f0550-f3e7-4dc9-a36f-1517162eecea__list_records_for_table",
+      "mcp__584f0550-f3e7-4dc9-a36f-1517162eecea__create_field",
+      "mcp__584f0550-f3e7-4dc9-a36f-1517162eecea__update_records_for_table",
+      "mcp__584f0550-f3e7-4dc9-a36f-1517162eecea__create_records_for_table",
+      "Bash(node --env-file=.env.local -e ' *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(node -e \"setTimeout\\(\\(\\) => console.log\\('waited 12s'\\), 12000\\)\")"
+    ]
+  }
+}

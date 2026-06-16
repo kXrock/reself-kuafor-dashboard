@@ -1,0 +1,15 @@
+/node_modules
+/.next
+/out
+/build
+.env.local
+.env*.local
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+
+# next-pwa generated
+/public/sw.js
+/public/workbox-*.js
+/public/sw.js.map
+/public/workbox-*.js.map

@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f6f1e9;
+  --surface: #fbf8f3;
+  --ink: #2b2520;
+  --muted: #8a7e70;
+  --clay: #b05b3b;
+  --hairline: #e3dacc;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-feature-settings: "kern";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Card primitive — hairline border, almost no shadow.
+   In @layer components so Tailwind bg-* / text-* utilities can override it. */
+@layer components {
+  .card {
+    background-color: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 5px;
+  }
+}
+
+/* Display numerals with optical sizing for the Fraunces hero metrics */
+.numeral {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Subtle eyebrow label used across sections */
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Splash fade */
+@keyframes splash-in {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-splash-in {
+  animation: splash-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* Hide scrollbars on horizontal day strips */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
