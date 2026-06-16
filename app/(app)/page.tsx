@@ -41,6 +41,7 @@ export default async function DashboardPage() {
     ]);
     data = { reservations, employees, services, business };
   } catch (e) {
+    console.error("[Dashboard] Airtable fetch failed:", e);
     if (e instanceof AirtableConfigError) return <DataError message={e.message} />;
     return (
       <DataError
