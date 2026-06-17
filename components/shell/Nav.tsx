@@ -26,7 +26,10 @@ function isActive(pathname: string, href: string): boolean {
 export function BottomNav() {
   const pathname = usePathname();
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-hairline bg-surface/95 backdrop-blur md:hidden">
+    <nav
+      className="fixed inset-x-0 bottom-0 z-30 border-t border-hairline bg-surface/95 backdrop-blur md:hidden"
+      style={{ paddingBottom: "max(env(safe-area-inset-bottom), 8px)" }}
+    >
       <ul className="mx-auto flex max-w-2xl items-stretch justify-between px-2">
         {items.map(({ href, label, icon: Icon }) => {
           const active = isActive(pathname, href);

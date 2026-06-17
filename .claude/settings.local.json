@@ -12,7 +12,8 @@
       "mcp__584f0550-f3e7-4dc9-a36f-1517162eecea__create_records_for_table",
       "Bash(node --env-file=.env.local -e ' *)",
       "mcp__Claude_Preview__preview_start",
-      "Bash(node -e \"setTimeout\\(\\(\\) => console.log\\('waited 12s'\\), 12000\\)\")"
+      "Bash(node -e \"setTimeout\\(\\(\\) => console.log\\('waited 12s'\\), 12000\\)\")",
+      "Bash(npm run *)"
     ]
   }
 }

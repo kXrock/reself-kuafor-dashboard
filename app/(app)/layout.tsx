@@ -45,7 +45,10 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         </aside>
 
         {/* Main column */}
-        <main className="w-full min-w-0 px-5 pb-28 pt-5 md:px-0 md:pb-0 md:pt-0">
+        <main
+          className="w-full min-w-0 px-5 pt-5 md:px-0 md:pb-0 md:pt-0"
+          style={{ paddingBottom: "calc(env(safe-area-inset-bottom) + 96px)" }}
+        >
           {children}
         </main>
       </div>
